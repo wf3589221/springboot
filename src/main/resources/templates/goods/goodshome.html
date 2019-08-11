@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>首页</title>
+
+	<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" th:href="@{/assets/css/bootstrap.min.css}" />
+
+	<!-- 全局js -->
+	<script src="../static/assets/js/jquery.min.js" th:src="@{/assets/js/jquery.min.js}"></script>
+	<script src="../static/assets/js/bootstrap.min.js" th:src="@{/assets/js/bootstrap.min.js}"></script>
+
+		<style type="text/css">
+			
+		</style>
+		
+	</head>
+	<body>
+		<!--http://www.jq22.com/jquery-info21137-->
+	<div class="container">
+    	<div class="row"  style="background-color:#333333;padding: 6px 0;">
+    		<div class="col-xs-2" style="text-align: center;">
+    			<a href=""><img th:src="@{/assets/images/weixin.png}"/></a>
+    		</div>
+    		<div class="col-xs-6">
+			    <div class="input-group">
+			      <input type="text" class="form-control" placeholder="">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="button">搜索</button>
+			      </span>
+			    </div>
+    		</div>
+    		<div class="col-xs-4 text-center">
+    			<div  th:if="${user} ==null">
+    				<a class="register btn btn-normal btn-success" th:href="@{/user/register}">注册</a>
+					<a class="login btn btn-normal btn-primary" th:href="@{/user}">登录</a>
+    			</div>
+    			<div th:if="${user} !=null">
+    				<a class="btn showloginbtn" th:href="@{/usermanage/userpage}">我的控制台</a>
+    			</div>
+    		</div>
+    	</div>
+
+
+		<div class="row" >
+
+			<div id="myCarousel" class="carousel slide col-xs-12 col-lg-10 col-lg-offset-1" style="padding: 0px;">
+				<div class="carousel-inner">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+					</ol>
+
+					<div class="item active">
+						<a href="#">
+							<img th:src="@{/assets/images/item1.jpg}" alt="第一张" width="100%">
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<img th:src="@{/assets/images/item2.jpg}" alt="第二张" width="100%">
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<img th:src="@{/assets/images/item3.jpg}" alt="第三张" width="100%">
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<img th:src="@{/assets/images/item4.jpg}" alt="第四张" width="100%">
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<img th:src="@{/assets/images/item5.jpg}" alt="第五张" width="100%">
+						</a>
+					</div>
+					<a href="#myCarousel" data-slide="prev" class="carousel-control left">
+						<!-- ‹ -->
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<!-- 左箭头 -->
+					<a href="#myCarousel" data-slide="next" class="carousel-control right">
+						<!-- › -->
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+					<!-- 右箭头 -->
+				</div>
+			</div>
+		</div>
+  	</div>
+
+	<script type="text/javascript">
+		$(function(){
+		//轮播图自动播放
+		$('#myCarousel').carousel({
+			interval: 3000,//自动播放4s
+
+		});
+
+	});
+	</script>
+
+	</body>
+</html>

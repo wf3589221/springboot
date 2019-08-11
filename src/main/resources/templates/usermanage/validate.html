@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" th:href="@{/assets/css/bootstrap.min.css}" />
+
+	<!-- 全局js -->
+	<script src="../static/assets/js/jquery.min.js" th:src="@{/assets/js/jquery.min.js}"></script>
+	<script src="../static/assets/js/bootstrap.min.js" th:src="@{/assets/js/bootstrap.min.js}"></script>
+
+	<style type="text/css">
+
+		form{
+			background-color: #FFFFFF;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid #D5D5D5;
+			border-radius: 4px;
+
+		}
+	</style>
+
+	</head>
+	
+	<body>
+		
+				<form class="form-horizontal" id="zinfo" role="form" method="post">
+							
+							<div class="form-group">
+								<label class="col-lg-2 control-label">企业名称：</label>
+								<div class="col-lg-10 ">
+									<input type="text" class="form-control" disabled="disabled" name="qname" id="name1" value="中间商品混泥土有限公司" placeholder="必填">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-lg-2 control-label">统一社会信用代码：</label>
+								<div class="col-lg-10 ">
+									<input type="text" class="form-control" name="qcode" id="name2" value="9142010027190225X7" placeholder="必填">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-lg-2 control-label">法人代表：</label>
+								<div class="col-lg-10 ">
+									<input type="text" class="form-control" name="qren" id="name3" value="郑涛" placeholder="必填">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-lg-2 control-label">注册资金：</label>
+								<div class="col-lg-10 ">
+									<input type="text" class="form-control"  id="name4" value="69000.000000万" placeholder="必填">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-lg-2 control-label">成立日期：</label>
+								<div class="col-lg-10 ">
+									<input type="text" class="form-control"  id="name5" value="1997-01-28" placeholder="必填">
+								</div>
+							</div>		
+							
+							<div class="form-group">
+								<label class="col-lg-2 control-label">经营模式：</label>
+								<div class="col-lg-10 ">
+									<input type="text" class="form-control"  id="name6" value="商品混凝土及其原材料生产、销售及咨询" placeholder="必填">
+								</div>
+							</div>		
+							
+							<div class="form-group">
+								<label class="col-lg-2 control-label">注册地址：</label>
+								<div class="col-lg-10 ">
+									<input type="text" class="form-control"  id="name7" value="东湖新技术开发区佛祖岭一路19号武汉中地大科技园11栋" placeholder="必填">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-lg-2 control-label">营业模式：</label>
+								<div class="col-lg-10 ">
+									<input type="text" class="form-control"  id="name8" value="多元化经营模式" placeholder="必填">
+								</div>
+							</div>
+							
+							
+							<div class="form-group">
+								<div class="col-lg-offset-2 col-lg-10">
+									<button type="button"  class="btn btn-primary" disabled="disabled"><!--提交认证-->审核中</button>
+								</div>
+							</div>
+
+						</form>
+		
+	</body>
+</html>

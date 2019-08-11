@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>我的控制台</title>
+
+		<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" th:href="@{/assets/css/bootstrap.min.css}" />
+
+		<!-- 全局js -->
+		<script src="../static/assets/js/jquery.min.js" th:src="@{/assets/js/jquery.min.js}"></script>
+		<script src="../static/assets/js/bootstrap.min.js" th:src="@{/assets/js/bootstrap.min.js}"></script>
+
+
+		<link rel="stylesheet" href="../static/assets/css/manage.css" th:href="@{/assets/css/manage.css}" />
+
+		<script src="../static/assets/js/slimscroll.min.js" th:src="@{/assets/js/slimscroll.min.js}"></script>
+		<script src="../static/assets/js/manage.js" th:src="@{/assets/js/manage.js}"></script>
+	</head>
+	<body>
+121234
+	<div id="wrapper">
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="index.html"><img  th:src="@{/assets/images/logo-dark.png}" alt="Klorofil Logo" class="img-responsive logo"></a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn" style="padding: 0; padding-top: 10px;">
+					<button type="button" class="btn-toggle-fullwidth btn-toggle-mx"><img  th:src="@{/assets/images/left.png}" height="40px" alt=""></button>
+				</div>
+			</div>
+		</nav>
+
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li>
+							<a href="userinfo.html" target="_blank" class="iframe_link active"><span>用户信息</span></a>
+						</li>
+						<li>
+							<a href="validate.html" target="_blank" class="iframe_link"><span>实名认证</span></a>
+						</li>
+						<li>
+							<a href="passmodify.html" target="_blank" class="iframe_link"><span>密码修改</span></a>
+						</li>
+						<li>
+							<a href="javascript:;" class="nav-togg"> <span>供需</span> </a>
+							<div>
+								<ul>
+									<li>
+										<a onclick="verifyInfo()" target="_blank" class="iframe_link"><span>买商品</span></a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" target="_blank" class="iframe_link"><span>卖商品</span></a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-content" style="height: 100%;">
+				<iframe src="userinfo.html" class="iframe_mx uicss-cn"></iframe>
+
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		function verifyInfo(){
+			console.log("2134235");
+			return false;
+		}
+
+	</script>
+
+
+
+	</body>
+</html>

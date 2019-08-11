@@ -2,6 +2,7 @@ package com.am.springboot.controller;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,9 +20,9 @@ import java.util.Random;
 @RequestMapping("/user")
 public class AM {
 
-
     @RequestMapping("")
-    public String login() {
+    public String login(Model model) {
+        model.addAttribute("error","");
         return "user/login";
     }
 
@@ -37,13 +38,13 @@ public class AM {
     }
 
     @RequestMapping("/loginRequest")
-    @ResponseBody
-    public String loginRequest(String username) {
+    public String loginRequest(String username,Model model) {
         System.out.println("username===:" + username);
         if (username.equals("123456789")) {
-            return "{\"ok\":\"100\"}";
+            return "user/validate";
         }
-        return "{\"ok\":\"101\"}";
+        model.addAttribute("error","用户名或密码错误");
+        return "user/login";
     }
 
 
