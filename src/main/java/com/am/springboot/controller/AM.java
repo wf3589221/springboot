@@ -31,17 +31,13 @@ public class AM {
         return "user/register";
     }
 
-
-    @RequestMapping("/validate")
-    public String validate() {
-        return "user/validate";
-    }
-
     @RequestMapping("/loginRequest")
     public String loginRequest(String username,Model model) {
-        System.out.println("username===:" + username);
         if (username.equals("123456789")) {
-            return "user/validate";
+            System.out.println("username===:" + username);
+            model.addAttribute("user","1234");
+           // return "usermanage/manage";
+            return "user/register";
         }
         model.addAttribute("error","用户名或密码错误");
         return "user/login";

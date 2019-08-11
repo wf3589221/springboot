@@ -10,8 +10,8 @@ public class GA {
 
 
     @RequestMapping("")
-    public String homePage(Model model) {
-        model.addAttribute("user","1234");
+    public String homePage() {
+        //model.addAttribute("user","1234");
         return "goods/goodshome";
     }
 
