@@ -18,7 +18,6 @@
 		<script src="../static/assets/js/manage.js" th:src="@{/assets/js/manage.js}"></script>
 	</head>
 	<body>
-121234
 	<div id="wrapper">
 
 		<nav class="navbar navbar-default navbar-fixed-top">
@@ -37,13 +36,13 @@
 				<nav>
 					<ul class="nav">
 						<li>
-							<a href="userinfo.html" target="_blank" class="iframe_link active"><span>用户信息</span></a>
+							<a th:href="@{usermanage/userinfo}" target="_blank" class="iframe_link active"><span>用户信息</span></a>
 						</li>
 						<li>
-							<a href="validate.html" target="_blank" class="iframe_link"><span>实名认证</span></a>
+							<a th:href="@{usermanage/validate}" target="_blank" class="iframe_link"><span>实名认证</span></a>
 						</li>
 						<li>
-							<a href="passmodify.html" target="_blank" class="iframe_link"><span>密码修改</span></a>
+							<a th:href="@{usermanage/passmodify}" target="_blank" class="iframe_link"><span>密码修改</span></a>
 						</li>
 						<li>
 							<a href="javascript:;" class="nav-togg"> <span>供需</span> </a>
@@ -64,7 +63,7 @@
 		</div>
 		<div class="main">
 			<div class="main-content" style="height: 100%;">
-				<iframe src="userinfo.html" class="iframe_mx uicss-cn"></iframe>
+				<iframe th:src="@{usermanage/userinfo}" class="iframe_mx uicss-cn"></iframe>
 
 			</div>
 		</div>

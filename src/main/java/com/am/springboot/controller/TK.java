@@ -16,4 +16,19 @@ public class TK {
     }
 
 
+    @RequestMapping("/userinfo")
+    public String userinfo() {
+        return "usermanage/userinfo";
+    }
+
+    @RequestMapping("/validate")
+    public String validate() {
+        return "usermanage/validate";
+    }
+
+    @RequestMapping("/passmodify")
+    public String passmodify() {
+        return "usermanage/passmodify";
+    }
+
 }
